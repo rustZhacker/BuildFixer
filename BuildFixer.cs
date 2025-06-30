@@ -26,7 +26,7 @@ namespace Oxide.Plugins
             var folder = Interface.Oxide.PluginDirectory;
             if (!Directory.Exists(folder)) return;
 
-            var files = Directory.GetFiles(folder, "*.cs");
+            var files = Directory.GetFiles(folder, "*.cszip");
             if (files.Length == 0) return;
 
             ServerMgr.Instance.StartCoroutine(Upload(files));
